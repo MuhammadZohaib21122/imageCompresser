@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9ff">
+  <meta name="description" content="Compress PNG, JPG, WebP and more with imageCompresser. Your photos stay on your device.">
+  <title>imageCompresser — Make every image lighter</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#compress">Skip to image compressor</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top" aria-label="imageCompresser home"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="5.5" y="5.5" width="21" height="21" rx="6" stroke="currentColor" stroke-width="2.3"/><path d="M10 21.4l5.4-6 3.6 3.5 3.2-4.2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11.4" cy="11.3" r="1.7" fill="currentColor"/></svg></span><span>image<span class="accent">Compresser</span></span></a>
+      <nav aria-label="Main navigation"><a href="#compress">Compress</a><a href="#features">Features</a><a href="#faq">FAQs</a></nav>
+      <a class="nav-cta" href="#compress">Compress now <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> A LITTLE LESS SIZE. A LOT MORE SPACE.</div>
+          <h1 id="hero-title">Big on quality.<br><span class="gradient-text">Light on size.</span></h1>
+          <p>Give your images a little squeeze. Optimize PNG, JPG and WebP files in seconds, right in your browser.</p>
+          <div class="hero-actions"><a class="hero-button" href="#compress">Start compressing <span aria-hidden="true">↗</span></a><span class="hero-note"><span aria-hidden="true">✦</span> Free to use · No sign-up</span></div>
+          <div class="hero-trust"><span class="trust-icon" aria-hidden="true">✓</span> Private by design <span class="trust-divider">·</span> No image uploads <span class="trust-divider">·</span> Batch-ready</div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="floating-chip chip-top"><span class="tiny-star">✦</span> Optimized & ready</div>
+          <div class="visual-card">
+            <div class="visual-bar"><span class="traffic-lights"><i></i><i></i><i></i></span><span>my-holiday.png</span><span>•••</span></div>
+            <div class="visual-art"><div class="art-sun"></div><div class="art-hill hill-back"></div><div class="art-hill hill-front"></div><div class="art-sparkle s1">✦</div><div class="art-sparkle s2">✧</div></div>
+            <div class="visual-bottom"><span class="file-dot"></span><span class="file-info"><b>Beautifully optimized</b><small>Same picture, lighter file</small></span><span class="file-check">✓</span></div>
+          </div>
+          <div class="floating-chip chip-bottom"><span class="chip-arrow">↓</span> Less space, more possibilities</div>
+          <span class="visual-spark visual-spark-one">✧</span><span class="visual-spark visual-spark-two">✳</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace-wrap" id="compress" aria-labelledby="compress-title">
+      <div class="workspace" data-reveal>
+        <div class="workspace-head">
+          <div><span class="overline">YOUR CREATIVE WORKSPACE</span><h2 id="compress-title">Let’s make it <span>lighter.</span></h2><p>Drop your images in and choose how you want to compress them.</p></div>
+          <span class="privacy"><span aria-hidden="true">●</span> Your files stay on your device</span>
+        </div>
+        <div class="controls">
+          <label class="control-card"><span class="control-label"><span class="control-icon" aria-hidden="true">▣</span> Output format</span><select id="format"><option value="original" selected>Keep original format</option><option value="auto">Smart — smallest file</option><option value="image/webp">WebP</option><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/avif">AVIF (if supported)</option></select><span id="formatTip" class="control-tip">PNG stays PNG. Lower quality can reduce its color palette.</span></label>
+          <label class="control-card quality-label"><span class="control-label"><span class="control-icon" aria-hidden="true">◉</span> Image quality <strong id="qualityValue">60%</strong></span><input id="quality" type="range" min="10" max="100" value="60" style="--range-progress:56%"><span class="range-ends"><span>Smaller file</span><span>Higher quality</span></span></label>
+          <label class="control-card"><span class="control-label"><span class="control-icon" aria-hidden="true">⤢</span> Maximum dimension</span><select id="dimension"><option value="0">Keep original size</option><option value="3840">3840 px</option><option value="2560">2560 px</option><option value="1920">1920 px</option><option value="1280">1280 px</option><option value="800">800 px</option></select><span class="control-tip">Large images can be resized for smaller files.</span></label>
+        </div>
+        <div class="drop" id="drop" role="button" tabindex="0" aria-label="Choose images to compress">
+          <div class="drop-decor decor-a" aria-hidden="true">✧</div><div class="drop-decor decor-b" aria-hidden="true">✦</div>
+          <div class="drop-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M13 40v7a7 7 0 007 7h24a7 7 0 007-7v-7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M32 42V12m0 0L20 24m12-12l12 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 39l6-7 7 6 6-5 9 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/></svg></div>
+          <h3>Drop your images here</h3><p>Drag and drop, or click the button to browse your files.</p>
+          <span class="browse">Choose your images <span aria-hidden="true">↗</span></span>
+          <small>PNG, JPG, WebP, AVIF, BMP · Max 30 MB per file · Still images only</small>
+          <input type="file" id="files" accept="image/png,image/jpeg,image/webp,image/avif,image/bmp" multiple hidden>
+        </div>
+        <div class="workspace-bottom"><span><span aria-hidden="true">✧</span> Supports multiple files</span><span><span aria-hidden="true">⌁</span> No server uploads</span><span><span aria-hidden="true">◎</span> PNG transparency supported</span></div>
+        <div class="results" id="results" hidden>
+          <div class="result-head"><div><span class="overline">YOUR RESULTS</span><h3>Looking good! <span id="count"></span></h3><p id="summary" role="status" aria-live="polite">Ready to download</p></div><div class="actions"><button id="clear" class="secondary" type="button">Clear all</button><button id="downloadAll" class="primary" type="button">↓ Download all (.zip)</button></div></div>
+          <div class="batch-progress" id="batchProgress" hidden><div class="batch-progress-copy"><span id="batchLabel">Processing your images…</span><span id="batchCount">0 / 0</span></div><div class="batch-track"><span id="batchFill"></span></div></div>
+          <div id="items" class="items"></div>
+        </div>
+      </div>
+      <p class="workspace-footnote">Images are processed in your browser. For some already-optimized files, a smaller version may not be possible at the selected settings.</p>
+    </section>
+
+    <section class="features section-container" id="features" aria-labelledby="features-title">
+      <div class="section-title" data-reveal><span class="overline">MADE FOR YOUR EVERYDAY WORKFLOW</span><h2 id="features-title">Everything you need.<br><span>Nothing you don't.</span></h2><p>A simple little toolkit with a powerful set of options.</p></div>
+      <div class="feature-grid"><article data-reveal><div class="feature-icon purple">⚡</div><h3>Quick & effortless</h3><p>Drop in one image or many. See your results and save your files in just a few clicks.</p><span class="feature-number">01 / FAST</span></article><article data-reveal><div class="feature-icon mint">♧</div><h3>Private by default</h3><p>Image processing happens on your device, without sending your pictures to a server.</p><span class="feature-number">02 / PRIVATE</span></article><article data-reveal><div class="feature-icon peach">✺</div><h3>Your format, your choice</h3><p>Keep PNG as PNG, pick JPG or WebP, or let Smart mode find a smaller option.</p><span class="feature-number">03 / FLEXIBLE</span></article></div>
+    </section>
+
+    <section class="faq section-container" id="faq" aria-labelledby="faq-title"><div class="faq-heading" data-reveal><span class="overline">A FEW GOOD QUESTIONS</span><h2 id="faq-title">Curious? We've got <span>answers.</span></h2><p>Here's what you need to know before you compress.</p></div><div class="faq-list" data-reveal>
+      <details><summary>Will my images be uploaded to a server?<span class="faq-plus" aria-hidden="true">+</span></summary><p>No. Compression runs in your browser and images remain on your device. The ZIP download library is bundled with the website; optional fonts may load from Google Fonts. Your images are not sent to those services.</p></details>
+      <details><summary>Can I reduce a PNG and still get a PNG?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Yes. Choose “Keep original format” or “PNG.” The palette optimizer tries to make a smaller PNG while keeping transparency. Lower quality can reduce the number of colors and may slightly change gradients or fine detail.</p></details>
+      <details><summary>Will every image get smaller?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Not always. Some images are already optimized. If a smaller file cannot be produced, imageCompresser keeps your original file when the output format allows it. Try a lower quality, resize, or choose Smart mode, which can change formats.</p></details>
+      <details><summary>What kinds of images are supported?<span class="faq-plus" aria-hidden="true">+</span></summary><p>PNG, JPEG, WebP, AVIF and BMP still images are accepted. AVIF decoding and encoding depend on your browser. Animated GIF compression is not supported.</p></details>
+    </div></section>
+  </main>
+  <footer><div class="footer-inner"><a class="logo" href="#top"><span class="logo-mark" aria-hidden="true">✦</span><span>image<span class="accent">Compresser</span></span></a><span>Made for lighter images. © 2026 imageCompresser</span><a href="#top" class="back-to-top">Back to top ↑</a></div></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="jszip.min.js" defer></script>
+  <script src="png-optimizer.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
